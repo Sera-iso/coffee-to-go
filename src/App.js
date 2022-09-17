@@ -1,11 +1,11 @@
-import Navigation from './Navigation';
+import Header from './Header';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Navigation />
+        <Header />
       </header>
       <main>
         <h1>Hello from Coffee To Go</h1>
