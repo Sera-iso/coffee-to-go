@@ -1,4 +1,7 @@
 import Header from './Header';
+import Hero from './Hero';
+import ProductList from './ProductList';
+import Footer from './Footer';
 import './App.css';
 
 function App() {
@@ -8,10 +11,13 @@ function App() {
         <Header />
       </header>
       <main>
-        <h1>Hello from Coffee To Go</h1>
+        <Hero />
       </main>
+      <section>
+        <ProductList />
+      </section>
       <footer>
-        <p>Coded by Sera and hosted on GitHub</p>
+        <Footer />
       </footer>
     </div>
   );
