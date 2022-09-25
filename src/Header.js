@@ -8,7 +8,7 @@ import { Link, useLocation } from 'react-router-dom'
 
 export default function Header() {
   const location = useLocation()
-  const isRegistrationScreen =  location.pathname === "/login"
+  const isRegistrationScreen =  location.pathname === "/login" || location.pathname === "/signup"
   
   return (
     <Popover className="relative bg-white">
@@ -44,14 +44,14 @@ export default function Header() {
           </Popover.Group>
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
             <Link to="/login" href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
-              Log in
+              Sign in
             </Link>
-            <a
-              href="#"
+            <Link
+              to="/signup"
               className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-yellow-900 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-yellow-800"
             >
               Sign up
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -99,17 +99,16 @@ export default function Header() {
                 </a>
               </div>
               <div>
-                <a
-                  href="#"
+                <Link to="/signup"
                   className="flex w-full items-center justify-center rounded-md border border-transparent bg-yellow-900 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-yellow-800"
                 >
                   Sign up
-                </a>
+                </Link>
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
                   Existing customer?{' '}
-                  <a href="#" className="text-yellow-900 hover:text-yellow-800">
-                    Log in
-                  </a>
+                  <Link to="/login" className="text-yellow-900 hover:text-yellow-800">
+                    Sign in
+                  </Link>
                 </p>
               </div>
             </div>
