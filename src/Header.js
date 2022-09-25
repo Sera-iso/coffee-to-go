@@ -4,21 +4,25 @@ import {
   Bars3Icon,
   XMarkIcon
 } from '@heroicons/react/24/outline'
+import { Link, useLocation } from 'react-router-dom'
 
 export default function Header() {
+  const location = useLocation()
+  const isRegistrationScreen =  location.pathname === "/login"
+  
   return (
     <Popover className="relative bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="/">
+            <Link to="/">
               <span className="sr-only">Coffee Shop</span>
               <img
                 className="h-8 w-auto sm:h-20"
                 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/08aea422-eab9-428b-82c9-9c04e411bb8c/dbf6otc-01c5d677-8fcc-4513-aeb0-66ac580446c7.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA4YWVhNDIyLWVhYjktNDI4Yi04MmM5LTljMDRlNDExYmI4Y1wvZGJmNm90Yy0wMWM1ZDY3Ny04ZmNjLTQ1MTMtYWViMC02NmFjNTgwNDQ2YzcuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.q3leHExsltuaN_cYUBXZ193NpSGkPoNhljUuLnTbjhU"
                 alt="coffee shop logo"
               />
-            </a>
+            </Link>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
             <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-400">
@@ -27,18 +31,21 @@ export default function Header() {
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
-            <a href="#productList" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <Link to="/" style={{ display : !isRegistrationScreen ? "none" : null}} className="text-base font-medium text-gray-500 hover:text-gray-900">
+              Home
+            </Link>
+            <a href="#productList" style={{ display : isRegistrationScreen ? "none" : null}} className="text-base font-medium text-gray-500 hover:text-gray-900">
               Products
-            </a>
-            <a href="#contacts" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            </a>           
+            <a href="#contacts" style={{ display : isRegistrationScreen ? "none" : null}} className="text-base font-medium text-gray-500 hover:text-gray-900">
               Contacts
             </a>
 
           </Popover.Group>
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-            <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+            <Link to="/login" href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
               Log in
-            </a>
+            </Link>
             <a
               href="#"
               className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-yellow-900 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-yellow-800"
