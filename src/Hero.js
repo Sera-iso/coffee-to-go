@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function Hero() {
   return (
     <div className="relative overflow-hidden bg-white">
@@ -30,12 +31,11 @@ export default function Hero() {
                   </a>
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3">
-                  <a
-                    href="#"
+                  <Link to="/login"
                     className="flex w-full items-center justify-center rounded-md border border-transparent bg-yellow-400 px-8 py-3 text-base font-medium text-yellow-900 hover:bg-yellow-300 md:py-4 md:px-10 md:text-lg"
                   >
                     Get subscription
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
