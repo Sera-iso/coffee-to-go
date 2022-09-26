@@ -4,10 +4,9 @@ import Footer from './Footer';
 import Home from './Home'
 import LogIn from './Log-in';
 import SignUp from './Sign-up';
-
+import LegalTerms from './LegalTerms';
 
 import './App.css';
-import ProductList from './ProductList';
 
 function App() {
   return (
@@ -18,10 +17,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<LogIn />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/terms" element={<LegalTerms />} />
         </Routes>
       </header>
-      <main>
-      </main>
       <footer>
         <Footer />
       </footer>

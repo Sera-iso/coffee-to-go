@@ -8,7 +8,7 @@ import { Link, useLocation } from 'react-router-dom'
 
 export default function Header() {
   const location = useLocation()
-  const isRegistrationScreen =  location.pathname === "/login" || location.pathname === "/signup"
+  const isRegistrationScreenOrLegalTermsPage =  location.pathname === "/login" || location.pathname === "/signup" || location.pathname === "/terms"
   
   return (
     <Popover className="relative bg-white">
@@ -31,13 +31,13 @@ export default function Header() {
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
-            <Link to="/" style={{ display : !isRegistrationScreen ? "none" : null}} className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <Link to="/" style={{ display : !isRegistrationScreenOrLegalTermsPage ? "none" : null}} className="text-base font-medium text-gray-500 hover:text-gray-900">
               Home
             </Link>
-            <a href="#productList" style={{ display : isRegistrationScreen ? "none" : null}} className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <a href="#productList" style={{ display : isRegistrationScreenOrLegalTermsPage ? "none" : null}} className="text-base font-medium text-gray-500 hover:text-gray-900">
               Products
             </a>           
-            <a href="#contacts" style={{ display : isRegistrationScreen ? "none" : null}} className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <a href="#contacts" style={{ display : isRegistrationScreenOrLegalTermsPage ? "none" : null}} className="text-base font-medium text-gray-500 hover:text-gray-900">
               Contacts
             </a>
 
