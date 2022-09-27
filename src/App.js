@@ -8,8 +8,7 @@ import LegalTerms from './LegalTerms';
 
 function App() {
   return (
-    <div>
-      <header>
+    <div className='mx-auto max-w-7xl px-4 sm:px-6'>
         <Header />
         <Routes>
             <Route path="/" element={<Home />} />
@@ -17,10 +16,7 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/terms" element={<LegalTerms />} />
         </Routes>
-      </header>
-      <footer>
         <Footer />
-      </footer>
     </div>
   );
 }
