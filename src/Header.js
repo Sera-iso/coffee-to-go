@@ -88,17 +88,22 @@ export default function Header() {
               </div>
             </div>
             <div className="space-y-6 py-6 px-5">
-              <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <a href="#productList" className="text-base font-medium text-gray-900 hover:text-gray-700">
+              <div className="flex justify-center items-center text-base font-medium text-gray-500 hover:text-gray-900" style={{ display : !isRegistrationScreenOrLegalTermsPage ? "none" : null}}>
+                <Link to="/">
+                  Home
+                </Link>
+              </div>
+              <div className="flex justify-around items-center text-base font-medium text-gray-500 hover:text-gray-900" style={{ display : isRegistrationScreenOrLegalTermsPage ? "none" : null}}>
+                <a href="#productList">
                   Products
                 </a>
-                <a href="#contacts" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                <a href="#contacts">
                   Contacts
                 </a>
               </div>
               <div>
                 <Link to="/signup"
-                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-yellow-900 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-yellow-800"
+                  className="flex items-center justify-center rounded-md border border-transparent bg-yellow-900 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-yellow-800"
                 >
                   Sign up
                 </Link>
