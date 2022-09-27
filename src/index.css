@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary-brown-color: rgb(128, 83, 43);
-  --secondary-yellow-color: rgb(253, 198, 19);
-  --tertiary-black-color: rgb(18, 24, 38);
-  --miscellaneous-grey-color: rgb(189, 194, 201);
-}
-
 html {
   scroll-behavior: smooth;
 }
