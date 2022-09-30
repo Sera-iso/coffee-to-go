@@ -63,7 +63,7 @@ export default function LogIn() {
               </div>
 
               <div className="text-sm">
-                <a href="#" className="font-medium text-yellow-900 hover:text-yellow-900">
+                <a href="/" className="font-medium text-yellow-900 hover:text-yellow-900">
                   Forgot your password?
                 </a>
               </div>
