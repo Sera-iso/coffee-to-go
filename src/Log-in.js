@@ -11,7 +11,7 @@ export default function LogIn() {
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600">
               Or{' '}
-              <Link to="/signup" className="font-medium text-yellow-900 hover:text-yellow-700">
+              <Link to="signup" className="font-medium text-yellow-900 hover:text-yellow-700">
                 create an account
               </Link>
             </p>

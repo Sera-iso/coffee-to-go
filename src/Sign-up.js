@@ -10,7 +10,7 @@ export default function SignUp() {
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600">
               Or{' '}
-              <Link to="/login" className="font-medium text-yellow-900 hover:text-yellow-700">
+              <Link to="login" className="font-medium text-yellow-900 hover:text-yellow-700">
                 sign in to your account
               </Link>
             </p>
@@ -76,7 +76,7 @@ export default function SignUp() {
 
             <div class="text-center text-sm text-grey-dark mt-4">
                 By signing up, you agree to the{' '} 
-                <Link to="/terms" target="_blank" rel="noopener noreferrer" className="no-underline border-b border-grey-dark text-grey-dark">
+                <Link to="terms" className="no-underline border-b border-grey-dark text-grey-dark">
                     Terms of Service and Privacy Policy
                 </Link>
             </div>
