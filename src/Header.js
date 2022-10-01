@@ -4,7 +4,7 @@ import {
   Bars3Icon,
   XMarkIcon
 } from '@heroicons/react/24/outline'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, Outlet } from 'react-router-dom'
 
 export default function Header() {
   const location = useLocation()
@@ -118,6 +118,7 @@ export default function Header() {
           </div>
         </Popover.Panel>
       </Transition>
+      <Outlet />
     </Popover>
   )
 }
