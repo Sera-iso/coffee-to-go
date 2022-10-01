@@ -76,7 +76,7 @@ export default function SignUp() {
 
             <div class="text-center text-sm text-grey-dark mt-4">
                 By signing up, you agree to the{' '} 
-                <Link to="/terms" target="_blank" className="no-underline border-b border-grey-dark text-grey-dark">
+                <Link to="/terms" target="_blank" rel="noopener noreferrer" className="no-underline border-b border-grey-dark text-grey-dark">
                     Terms of Service and Privacy Policy
                 </Link>
             </div>

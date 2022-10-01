@@ -4,6 +4,7 @@ import Footer from './Footer';
 import Home from './Home'
 import LogIn from './Log-in';
 import SignUp from './Sign-up';
+import NoPage from './NoPage';
 import LegalTerms from './LegalTerms';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
             <Route path="/login" element={<LogIn />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/terms" element={<LegalTerms />} />
+            <Route path="*" element={<NoPage />} />
         </Routes>
         <Footer />
     </div>
