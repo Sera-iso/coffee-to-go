@@ -16,7 +16,7 @@ function App() {
             <Route path="/login" element={<LogIn />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/terms" element={<LegalTerms />} />
-            <Route path="*" element={<NoPage />} />
+            <Route path="/*" element={<NoPage />} />
         </Routes>
         <Footer />
     </div>
