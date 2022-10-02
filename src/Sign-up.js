@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { LockClosedIcon } from '@heroicons/react/20/solid'
+import LegalTerms from './LegalTerms'
 export default function SignUp() {
     return(
       <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -76,9 +77,7 @@ export default function SignUp() {
 
             <div class="text-center text-sm text-grey-dark mt-4">
                 By signing up, you agree to the{' '} 
-                <Link to="/terms" target='_blank' rel="noreferrer" className="no-underline border-b border-grey-dark text-grey-dark">
-                    Terms of Service and Privacy Policy
-                </Link>
+                <LegalTerms />
             </div>
 
             <div>

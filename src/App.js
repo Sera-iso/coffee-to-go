@@ -5,7 +5,6 @@ import Home from './Home'
 import LogIn from './Log-in';
 import SignUp from './Sign-up';
 import NoPage from './NoPage';
-import LegalTerms from './LegalTerms';
 
 function App() {
   return (
@@ -13,9 +12,8 @@ function App() {
         <Header />
         <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route exact path="/login" element={<LogIn />} />
-            <Route exact path="/signup" element={<SignUp />} />
-            <Route exact path="/terms" element={<LegalTerms />} />
+            <Route path="/login" element={<LogIn />} />
+            <Route path="/signup" element={<SignUp />} />
             <Route path="*" element={<NoPage />} />
         </Routes>
         <Footer />
