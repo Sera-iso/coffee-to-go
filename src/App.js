@@ -12,11 +12,10 @@ function App() {
     <div className='mx-auto max-w-7xl px-4 sm:px-6'>
         <Header />
         <Routes>
-            <Route path="/" element={<App />} />
-            <Route index element={<Home />} />
-            <Route path="login" element={<LogIn />} />
-            <Route path="signup" element={<SignUp />} />
-            <Route path="terms" element={<LegalTerms />} />
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/login" element={<LogIn />} />
+            <Route exact path="/signup" element={<SignUp />} />
+            <Route exact path="/terms" element={<LegalTerms />} />
             <Route path="*" element={<NoPage />} />
         </Routes>
         <Footer />
