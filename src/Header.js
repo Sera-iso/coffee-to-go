@@ -9,7 +9,7 @@ import { Link, useLocation, Outlet } from 'react-router-dom'
 export default function Header() {
   const location = useLocation()
   const isRegistrationScreenOrLegalTermsPage =  location.pathname === "/login" || location.pathname === "/signup" || location.pathname === "/terms"
-  
+
   return (
     <Popover className="relative bg-white">
         <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
@@ -43,7 +43,7 @@ export default function Header() {
           </Popover.Group>
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
             <Link to="/login" href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
-              Sign in
+              Log in
             </Link>
             <Link
               to="/signup"
