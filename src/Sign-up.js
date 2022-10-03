@@ -50,7 +50,6 @@ export default function SignUp() {
                   Password
                 </label>
                 <input
-                  id="password"
                   name="password"
                   type="password"
                   autoComplete="current-password"
@@ -64,7 +63,6 @@ export default function SignUp() {
                   Confirm Password
                 </label>
                 <input
-                  id="password"
                   name="password"
                   type="password"
                   autoComplete="current-password"
@@ -75,7 +73,7 @@ export default function SignUp() {
               </div>
             </div>
 
-            <div class="text-center text-sm text-grey-dark mt-4">
+            <div className="text-center text-sm text-grey-dark mt-4">
                 By signing up, you agree to the{' '} 
                 <LegalTerms />
             </div>
