@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 export default function LegalTerms() {
   const [showModal, setShowModal] = useState(false);
