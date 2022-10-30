@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Espresso",
+    "price": 1,
+    "imageSrc": "https://images.unsplash.com/photo-1596952954288-16862d37405b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    "imageAlt": "Espresso coffee"
+  },
+  {
+    "id": 2,
+    "name": "Cappuccino",
+    "price": 3,
+    "imageSrc": "https://images.unsplash.com/photo-1621135177072-57c9b6242e7a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80",
+    "imageAlt": "Cappuccino coffee"
+  },
+  {
+    "id": 3,
+    "name": "Latte",
+    "price": 4,
+    "imageSrc": "https://images.unsplash.com/photo-1618207319353-e77a284858e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    "imageAlt": "Latte"
+  },
+  {
+    "id": 4,
+    "name": "Americano",
+    "price": 2,
+    "imageSrc": "https://images.unsplash.com/photo-1570470751982-79a6d69b19c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    "imageAlt": "Americano coffee"
+  },
+  {
+    "id": 5,
+    "name": "Iced coffee",
+    "price": 3,
+    "imageSrc": "https://images.unsplash.com/photo-1527678357412-ef45dfbd9ecc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    "imageAlt": "Iced coffee"
+  },
+  {
+    "id": 6,
+    "name": "Macchiato",
+    "price": 2,
+    "imageSrc": "https://images.unsplash.com/photo-1485808191679-5f86510681a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    "imageAlt": "Macchiato"
+  }
+]
