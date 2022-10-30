@@ -5,22 +5,18 @@ import { useShoppingCart } from "../context/ShoppingCartContext";
 import { NavLink } from "react-router-dom";
 import CartItem from "./CartItem";
 import { formatCurrency } from "../utilities/formatCurrency";
-import products from "../data/db.json"
+import products from "../data/db.json";
 
 type ShoppingCartProps = {
-  isOpen: boolean
-}
+  isOpen: boolean;
+};
 
 export default function Cart({ isOpen }: ShoppingCartProps) {
-  const {closeCart, cartItems} = useShoppingCart()
+  const { closeCart, cartItems, cartQuantity } = useShoppingCart();
 
   return (
     <Transition.Root show={isOpen} as={Fragment}>
-      <Dialog
-        as="div"
-        className="relative z-10"
-        onClose={closeCart}
-      >
+      <Dialog as="div" className="relative z-10" onClose={closeCart}>
         <Transition.Child
           as={Fragment}
           enter="ease-in-out duration-500"
@@ -63,20 +59,37 @@ export default function Cart({ isOpen }: ShoppingCartProps) {
                           </button>
                         </div>
                       </div>
-                      {cartItems.map(item => (
-                          <CartItem key={item.id} {...item} />
-                        ))}
+                      {cartQuantity === 0 ? (
+                        <div>
+                          <p className="text-gray-400">
+                            Your cup is empty. Refill it!
+                          </p>
+                        </div>
+                      ) : (
+                        <div>
+                          {cartItems.map((item) => (
+                            <CartItem key={item.id} {...item} />
+                          ))}
+                        </div>
+                      )}
                     </div>
 
                     <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
                       <div className="flex justify-between text-base font-medium text-gray-900">
                         <p>Total</p>
-                        <p>{formatCurrency(
-                          cartItems.reduce((total, cartItem) => {
-                          const product = products.find(product => product.id === cartItem.id)
-                          return total + (product?.price || 0) * cartItem.quantity
-                        }, 0)
-                        )}</p>
+                        <p>
+                          {formatCurrency(
+                            cartItems.reduce((total, cartItem) => {
+                              const product = products.find(
+                                (product) => product.id === cartItem.id
+                              );
+                              return (
+                                total +
+                                (product?.price || 0) * cartItem.quantity
+                              );
+                            }, 0)
+                          )}
+                        </p>
                       </div>
                       <div className="mt-6">
                         <a
@@ -90,12 +103,12 @@ export default function Cart({ isOpen }: ShoppingCartProps) {
                         <p>
                           or{" "}
                           <button onClick={closeCart}>
-                          <NavLink
-                            to="/"
-                            className="font-medium text-yellow-900 hover:text-yellow-700"
-                          >
-                            back to the menu
-                          </NavLink>
+                            <NavLink
+                              to="/"
+                              className="font-medium text-yellow-900 hover:text-yellow-700"
+                            >
+                              back to the menu
+                            </NavLink>
                           </button>
                         </p>
                       </div>

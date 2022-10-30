@@ -13,14 +13,14 @@ export default function Navbar() {
           <NavLink to="/">Home</NavLink>
         </div>
 
-        {cartQuantity > 0 && (
-          <button onClick={openCart} className="relative">
-            <i className="fa-solid fa-mug-hot items-center text-2xl md:text-3xl text-yellow-900"></i>
+        <button onClick={openCart} className="relative">
+          <i className="fa-solid fa-mug-hot items-center text-2xl md:text-3xl text-yellow-900"></i>
+          {cartQuantity > 0 && (
             <div className="flex items-center justify-center px-2 py-1 text-xs leading-none text-yellow-900 font-bold bg-yellow-400 rounded-full absolute right-0 bottom-0 translate-y-2/4 translate-x-2/4">
               {cartQuantity}
             </div>
-          </button>
-        )}
+          )}
+        </button>
 
         <div className="-my-2 -mr-2 md:hidden">
           <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-400">
