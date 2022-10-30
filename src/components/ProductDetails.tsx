@@ -9,10 +9,6 @@ type ProductProps = {
   imageAlt: string;
 };
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function ProductDetails({
   id,
   name,
@@ -20,11 +16,8 @@ export default function ProductDetails({
   imageSrc,
   imageAlt,
 }: ProductProps) {
-  const {
-    getItemQuantity,
-    increaseCartQuantity,
-    decreaseCartQuantity
-  } = useShoppingCart();
+  const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity } =
+    useShoppingCart();
   const quantity = getItemQuantity(id);
 
   return (
@@ -45,15 +38,22 @@ export default function ProductDetails({
               Add to cart
             </button>
           ) : (
-          <div className="mt-6 flex items-center justify-between">
-            <button onClick={() => decreaseCartQuantity(id)} className="rounded-md bg-yellow-900 py-3 px-8 text-base font-medium text-white hover:bg-yellow-800 focus:outline-none focus:ring-2 focus:ring-yellow-900 focus:ring-offset-2">
-              -
-            </button>
-            <span className="mx-4">{quantity} in cart</span>
-            <button onClick={() => increaseCartQuantity(id)} className="rounded-md bg-yellow-900 py-3 px-8 text-base font-medium text-white hover:bg-yellow-800 focus:outline-none focus:ring-2 focus:ring-yellow-900 focus:ring-offset-2">
-              +
-            </button>
-          </div>)}
+            <div className="mt-6 flex items-center justify-between">
+              <button
+                onClick={() => decreaseCartQuantity(id)}
+                className="rounded-md bg-yellow-900 py-3 px-8 text-base font-medium text-white hover:bg-yellow-800 focus:outline-none focus:ring-2 focus:ring-yellow-900 focus:ring-offset-2"
+              >
+                -
+              </button>
+              <span className="mx-4">{quantity} in cart</span>
+              <button
+                onClick={() => increaseCartQuantity(id)}
+                className="rounded-md bg-yellow-900 py-3 px-8 text-base font-medium text-white hover:bg-yellow-800 focus:outline-none focus:ring-2 focus:ring-yellow-900 focus:ring-offset-2"
+              >
+                +
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </>

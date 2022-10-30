@@ -29,11 +29,17 @@ export function useShoppingCart() {
 
 export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [cartItems, setCartItems] = useLocalStorage<CartItem[]>("shopping-cart", []);
+  const [cartItems, setCartItems] = useLocalStorage<CartItem[]>(
+    "shopping-cart",
+    []
+  );
 
-  const openCart = () => setIsOpen(true)
-  const closeCart = () => setIsOpen(false)
-  const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0)
+  const openCart = () => setIsOpen(true);
+  const closeCart = () => setIsOpen(false);
+  const cartQuantity = cartItems.reduce(
+    (quantity, item) => item.quantity + quantity,
+    0
+  );
 
   function getItemQuantity(id: number) {
     return cartItems.find((item) => item.id === id)?.quantity || 0;
@@ -80,7 +86,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         openCart,
         closeCart,
         cartItems,
-        cartQuantity
+        cartQuantity,
       }}
     >
       {children}
