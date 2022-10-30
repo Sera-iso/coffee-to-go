@@ -9,13 +9,18 @@ export default function Navbar() {
       <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 px-2">
         <div className="flex justify-start lg:w-0 text-base font-medium text-gray-500 hover:text-gray-900">
           <NavLink to="/">
-            <i className="fa-solid fa-house text-xl text-yellow-900"></i>
+            <i className="fa-solid fa-house text-2xl md:text-3xl text-yellow-900"></i>
           </NavLink>
         </div>
         <div>
-          <NavLink to="/cart">
-            <i className="fa-solid fa-mug-hot items-center text-xl text-yellow-900"></i>
-          </NavLink>
+          <button className="relative">
+            <NavLink to="/cart">
+              <i className="fa-solid fa-mug-hot items-center text-2xl md:text-3xl text-yellow-900"></i>
+            </NavLink>
+            <div className="flex items-center justify-center px-2 py-1 text-xs leading-none text-red-100 bg-red-600 rounded-full absolute right-0 bottom-0 translate-y-2/4 translate-x-2/4">
+              3
+            </div>
+          </button>
         </div>
         <div className="-my-2 -mr-2 lg:hidden">
           <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-400">
@@ -59,6 +64,14 @@ export default function Navbar() {
                 <div>
                   <NavLink to="/">Home</NavLink>
                 </div>
+                <button className="relative">
+                  <NavLink to="/cart">
+                    <i className="fa-solid fa-mug-hot items-center text-2xl md:text-3xl text-yellow-900"></i>
+                  </NavLink>
+                  <div className="flex items-center justify-center px-2 py-1 text-xs leading-none text-red-100 bg-red-600 rounded-full absolute right-0 bottom-0 translate-y-2/4 translate-x-2/4">
+                    3
+                  </div>
+                </button>
                 <div className="-mr-2">
                   <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-400">
                     <span className="sr-only">Close menu</span>
